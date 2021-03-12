@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+:root {
+    --fore: #D8DEE9;
+    --back: #2E3440;
+    --font: 'Monsterrat', sans-serif;
+}
+
+body {
+    background-image: url('../images/background.jpg');
+    background-position: 5% 83%;
+    background-repeat: no-repeat;
+    background-color: var(--back);
+}
+
+.hero h1 {
+    font-family: var(--font);
+    font-weight: 300;
+    color: var(--fore);
+    text-align: center;
+    font-size: 4em;
+}
+
+.hero h2 {
+    font-family: var(--font);
+    text-align: center;
+    color: var(--fore);
+    font-weight: 300;
+}
+
+.cards {
+    display: flex;
+    margin-top: 5em;
+    opacity: 0.7;
+}
+
+.cards h2 {
+    font-family: var(--font);
+    font-weight: 400;
+    color: var(--fore);
+    margin-top: 1.8em;
+    font-size: 1.8em;
+}
+
+.cards a {
+    display: grid;
+    text-decoration: none;
+}
+
+
+.about-card {
+    background-color: #BF616A;
+    width: 15em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    border-radius: 1em;
+    height: 8em;
+}
+
+.about-card:hover {
+    opacity: 0.8;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.project-card {
+    background-color: #A3BE8C;
+    width: 15em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-left: 1.8em;
+    border-radius: 1em;
+    height: 8em;
+}
+
+.project-card:hover {
+    opacity: 0.8;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+
+.git-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: #3b4252;
+    width: 15em;
+    height: 13em;
+    margin-top: 2em;
+    border-radius: 1em;
+    opacity: 0.9;
+}
+
+.git-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    opacity: 1;
+}
+
+.git-card img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    padding-top: 2.7em;
+}
+
+@media (max-width: 750px) {
+    .cards {
+        display: block;
+    }
+    .project-card {
+        margin-left: 0;
+        margin-top: 1em;
+    }
+}

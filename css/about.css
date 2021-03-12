@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+body {
+    background-color: #2E3440;
+    font-family: 'Monsterrat', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-weight: 400;
+    color: #D8DEE9;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+h1::before {
+    content: ' ';
+    position: absolute;
+    width: 1em;
+    background: #A3BE8C;
+    opacity: .5;
+    height: .3em;
+    bottom: 0;
+    z-index: -1;
+    margin-left: -.3em;
+    transition: 700ms;
+}
+
+h1:hover::before {
+    opacity: .9;
+    width: 3.8em;
+    transition: 300ms;
+}
+
+hr {
+    background-color: #D8DEE9;
+    color: #D8DEE9;
+}
+
+.about-content {
+    font-weight: 300;
+    font-size: large;
+    color: #D8DEE9;
+}
