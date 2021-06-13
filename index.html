@@ -1,64 +1,29 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinamra Jain</title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Travelling Salesman</title>
+    <style>
+        html,
+        body,
+        canvas {
+            margin: 0px;
+            padding: 0px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: absolute;
+            background: black;
+            z-index: 0;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="hero">
-        <h1>Vinamra Jain</h1>
-        <h2>Programmer, Student</h2>
-    </div>
-
-    <div class="cards" id="cards">
-        <a href="/about" class="about">
-            <div class="about-card">
-                <h2>About</h2>
-            </div>
-        </a>
-        <a href="/projects" class="projects">
-            <div class="project-card">
-                <h2>Projects</h2>
-            </div>
-        </a>
-        <script>
-            function centerCard() {
-                let wid = window.innerWidth;
-                let marCard;
-                if (wid < 750) {
-                    marCard = (wid - 240) / 2;
-                } else {
-                    marCard = (wid - 509) / 2;
-                }
-                document.getElementById("cards").style.marginLeft = marCard + "px";
-            }
-            centerCard();
-            addEventListener('resize', centerCard);
-
-        </script>
-    </div>
-
-    <div class="contact" id="contact">
-        <a href="https://github.com/v1nam">
-            <div class="git-card">
-                <img src="images/github_logo.png" alt="github logo">
-            </div>
-        </a>
-
-        <script>
-            function centerGit() {
-                let wid = window.innerWidth;
-                let marCard = (wid - 240) / 2;
-                document.getElementById("contact").style.marginLeft = marCard + "px";
-            }
-            centerGit();
-            addEventListener('resize', centerGit);
-        </script>
-    </div>
+    <canvas id="glcanvas" tabindex='1'></canvas>
+    <!-- Minified and statically hosted version of https://github.com/not-fl3/macroquad/blob/master/js/mq_js_bundle.js -->
+    <script src="https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js"></script>
+    <script>load("travelling_salesman.wasm");</script> <!-- Your compiled wasm file -->
 </body>
 
 </html>
