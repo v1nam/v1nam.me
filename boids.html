@@ -21,20 +21,9 @@
 
 <body>
 <!--    <canvas id="glcanvas" tabindex='1'></canvas> -->
-    <button id='boid2d'>View 2D Visualization</button>
-    <button id='boid3d'>View 3D Visualization</button>
     <canvas id="glcanvas" tabindex='1'></canvas>
     <script src='https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js'></script>
-    <script>
-        const button2d = document.getElementById('boid2d');
-        const button3d = document.getElementById('boid3d');
-        button2d.addEventListener('click', () => {
-            load("boids.wasm");
-        });
-        button3d.addEventListener('click', () => {
-            load("boids3d.wasm");
-        });
-    </script>
+    <script>load("boids.wasm");</script>
 </body>
 
 </html>
