@@ -20,10 +20,21 @@
 </head>
 
 <body>
+<!--    <canvas id="glcanvas" tabindex='1'></canvas> -->
+    <button id='boid2d'>View 2D Visualization</button>
+    <button id='boid3d'>View 3D Visualization</button>
     <canvas id="glcanvas" tabindex='1'></canvas>
-    <!-- Minified and statically hosted version of https://github.com/not-fl3/macroquad/blob/master/js/mq_js_bundle.js -->
-    <script src="https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js"></script>
-    <script>load("boids.wasm");</script> <!-- Your compiled wasm file -->
+    <script src='https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js'></script>
+    <script>
+        const button2d = document.getElementById('boid2d');
+        const button3d = document.getElementById('boid3d');
+        button2d.addEventListener('click', () => {
+            load("boids.wasm");
+        });
+        button3d.addEventListener('click', () => {
+            load("boids3d.wasm");
+        });
+    </script>
 </body>
 
 </html>
